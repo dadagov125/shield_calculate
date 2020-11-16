@@ -1,0 +1,256 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shield calculator</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+<div class="col">
+
+
+    <form id="form" name="form" class="adaptive">
+
+
+        <div class="col">
+
+
+            <div class="col">
+
+                <div class="row align-items-center margin-top-10">
+                    <div class="group-label"></div>
+                    <div class="title">Заслонка</div>
+                </div>
+
+                <div class="row align-items-center margin-top-10">
+                    <div class="group-label">
+                        Управление
+                    </div>
+                    <div class="col">
+                        <div>
+                            <input name="damper_manag" value="discret" checked type="radio" id="damper_manag_discret">
+                            <label for="damper_manag_discret">Дискретное</label>
+                        </div>
+                        <div>
+                            <input name="damper_manag" value="analog" type="radio" id="damper_manag_analog">
+                            <label for="damper_manag_discret">Аналоговое</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row align-items-center margin-top-10">
+                    <div class="group-label">
+                        Контроль открытия
+                    </div>
+                    <div class="col">
+                        <div>
+                            <input name="open_contr" value="true" type="radio" checked id="open_contr_true">
+                            <label for="open_contr_true">Есть</label>
+                        </div>
+                        <div>
+                            <input name="open_contr" value="false" type="radio" id="open_contr_false">
+                            <label for="open_contr_false">Нет</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+
+                <div class="row align-items-center margin-top-10">
+                    <div class="group-label"></div>
+                    <div class="title">Фильтра</div>
+                </div>
+
+                <div class="row align-items-center margin-top-10">
+                    <div class="group-label">
+                        Количество
+                    </div>
+                    <div class="col">
+                        <div>
+                            <input name="filter_count" type="number" min="0" value="3" id="filter_count">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row align-items-center margin-top-10">
+                    <div class="group-label">
+                        Сигналы
+                    </div>
+                    <div class="col">
+                        <div>
+                            <input name="signal" value="split" type="radio" checked id="signal_split">
+                            <label for="signal_split">Разделенные</label>
+                        </div>
+                        <div>
+                            <input name="signal" value="join" type="radio" id="signal_join">
+                            <label for="signal_join">Объединенные</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+
+                <div class="row align-items-center margin-top-10">
+                    <div class="group-label"></div>
+                    <div class="title">Нагреватель</div>
+                </div>
+
+                <div class="row align-items-center margin-top-10">
+                    <div class="group-label">
+                        Тип
+                    </div>
+                    <div class="col">
+                        <div>
+                            <input name="heater" value="water" type="radio" checked id="heater_water">
+                            <label for="heater_water">Водяной</label>
+                        </div>
+                        <div>
+                            <input name="heater" value="electric" type="radio" id="heater_electric">
+                            <label for="heater_electric">Электрический</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+
+                <div class="row align-items-center margin-top-10">
+                    <div class="group-label"></div>
+                    <div class="title">Охладитель</div>
+                </div>
+
+                <div class="row align-items-center margin-top-10">
+                    <div class="group-label">
+                        Тип
+                    </div>
+                    <div class="col">
+                        <div>
+                            <input name="cooler" value="no" type="radio" checked id="cooler_no">
+                            <label for="cooler_no">Нет</label>
+                        </div>
+                        <div>
+                            <input name="cooler" value="water" type="radio" id="cooler_water">
+                            <label for="cooler_water">Водяной</label>
+                        </div>
+                        <div>
+                            <input name="cooler" value="frion" type="radio" id="cooler_frion">
+                            <label for="cooler_frion">Фрионовый</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col">
+
+            <div class="col">
+
+                <div class="row align-items-center margin-top-10">
+                    <div class="group-label"></div>
+                    <div class="title">Вентилятор</div>
+                </div>
+
+                <div class="row align-items-center margin-top-10">
+                    <div class="group-label">
+                        Мощность
+                    </div>
+                    <div class="col">
+                        <div>
+                            <input name="power" type="number" step="0.1" min="0.1" value="2.2" id="power">
+                            <label for="power">кВ</label>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row align-items-center margin-top-10">
+                    <div class="group-label">
+                        Управление
+                    </div>
+                    <div class="col">
+                        <div>
+                            <input name="fan_manag" value="direct" type="radio" checked id="fan_manag_direct">
+                            <label for="fan_manag_direct">Прямой пуск</label>
+                        </div>
+                        <div>
+                            <input name="fan_manag" value="converter" type="radio" id="fan_manag_converter">
+                            <label for="fan_manag_converter">Преобразователь частоты</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+
+                <div class="row align-items-center margin-top-10">
+                    <div class="group-label"></div>
+                    <div class="title">Общие</div>
+                </div>
+
+
+                <div class="row align-items-center margin-top-10">
+                    <div class="group-label">
+                        Корпус
+                    </div>
+                    <div class="col">
+                        <div>
+                            <input name="corpus" value="plastic" type="radio" checked id="corpus_plastic">
+                            <label for="corpus_plastic">Пластик</label>
+                        </div>
+                        <div>
+                            <input name="corpus" value="metall" type="radio" id="corpus_metall">
+                            <label for="corpus_metall">Металл</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row align-items-start margin-top-10">
+                    <div class="group-label">
+                        Доп. опции
+                    </div>
+                    <div class="col">
+                        <div>
+                            <input name="fire_signal" value="fire_signal" type="checkbox" checked id="fire_signal">
+                            <label for="fire_signal">Сигнал Пожар</label>
+                        </div>
+
+                        <div>
+                            <input name="led_indication" value="led_indication" type="checkbox" checked
+                                   id="led_indication">
+                            <label for="led_indication">LED-индикация</label>
+                        </div>
+
+                        <div>
+                            <input name="dispatching" value="dispatching" type="checkbox" checked id="dispatching">
+                            <label for="dispatching">Диспетчеризация</label>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </form>
+
+    <div class="row align-items-center justify-content-center margin-top-10">
+        <button id="send_btn" type="button">Отправить</button>
+    </div>
+
+</div>
+</body>
+<script src="javascripts/index.js"></script>
+</html>
